@@ -57,7 +57,6 @@ public class ClientMain extends BasicGame {
 	public void update(GameContainer gc, int delta) throws SlickException {
 		if(Keyboard.isKeyDown(Keyboard.KEY_ESCAPE))
 			clientData.exited = true;
-		clientData.delta = delta;
 		clientData.leftPressed = Keyboard.isKeyDown(Keyboard.KEY_A);
 		clientData.rightPressed = Keyboard.isKeyDown(Keyboard.KEY_D);
 		clientData.upPressed = Keyboard.isKeyDown(Keyboard.KEY_W);

@@ -21,7 +21,7 @@ public class GameServer extends GameSocket {
 		try {
 			app = new AppGameContainer(new ServerGame("Server"));
 			app.setDisplayMode(400, 400, false);
-			app.setMinimumLogicUpdateInterval(15);
+			//app.setMinimumLogicUpdateInterval(15);
 			app.setAlwaysRender(true);
 			app.setVSync(true);
 			app.start();
@@ -59,7 +59,9 @@ public class GameServer extends GameSocket {
 				g.drawRect((int) (double) data.x.get(i), (int) (double) data.y.get(i), 40, 40);
 			}
 		}
-		public void update(GameContainer gc, int delta) throws SlickException {}
+		public void update(GameContainer gc, int delta) throws SlickException {
+			data.update((double) delta / 1000.0);
+		}
 		
 	}
 	

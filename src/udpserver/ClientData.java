@@ -2,12 +2,11 @@ package udpserver;
 
 import java.io.Serializable;
 
-import org.newdawn.slick.Input;
-
 public class ClientData implements Serializable {
 	
+	private static final long serialVersionUID = 2L;
+
 	public boolean exited = false;
-	public double delta = 0;
 	
 	public boolean leftPressed;
 	public boolean rightPressed;
