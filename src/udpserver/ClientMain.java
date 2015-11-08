@@ -40,18 +40,18 @@ public class ClientMain extends BasicGame {
 		if(gameClient.loaded) {
 			g.setAntiAlias(true);
 			g.setLineWidth(4);
-			for(int i = 0; i < data.x.size(); i++) {
+			for(int i = 0; i < data.indieData.size(); i++) {
 				if(i != data.index) {
 					g.setColor(Color.blue);
-					g.fillOval((int) (double) data.x.get(i), (int) (double) data.y.get(i), 40, 40);
+					g.fillOval((int) data.indieData.get(i).x, (int) data.indieData.get(i).y, 40, 40);
 					g.setColor(Color.white);
-					g.drawOval((int) (double) data.x.get(i), (int) (double) data.y.get(i), 40, 40);
+					g.drawOval((int) data.indieData.get(i).x, (int) data.indieData.get(i).y, 40, 40);
 				}
 			}
 			g.setColor(Color.red);
-			g.fillOval((int) (double) data.x.get(data.index), (int) (double) data.y.get(data.index), 40, 40);
+			g.fillOval((int) data.indieData.get(data.index).x, (int) data.indieData.get(data.index).y, 40, 40);
 			g.setColor(Color.white);
-			g.drawOval((int) (double) data.x.get(data.index), (int) (double) data.y.get(data.index), 40, 40);
+			g.drawOval((int) data.indieData.get(data.index).x, (int) data.indieData.get(data.index).y, 40, 40);
 		}
 	}
 	public void update(GameContainer gc, int delta) throws SlickException {

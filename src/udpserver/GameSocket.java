@@ -22,7 +22,9 @@ public abstract class GameSocket extends Thread {
 		DatagramPacket packet = new DatagramPacket(data, data.length, ipAddress, port);
 		try {
 			socket.send(packet);
-		} catch (Exception e) {}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 	}
 	
 	public void run() {
@@ -32,7 +34,9 @@ public abstract class GameSocket extends Thread {
 			try {
 				socket.receive(packet);
 				readData(packet);
-			} catch (Exception e) {}
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
 		}
 	}
 	

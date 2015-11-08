@@ -55,8 +55,8 @@ public class GameServer extends GameSocket {
 		public void init(GameContainer gc) throws SlickException {}
 		public void render(GameContainer gc, Graphics g) throws SlickException {
 			g.setColor(Color.blue);
-			for(int i = 0; i < data.x.size(); i++) {
-				g.drawRect((int) (double) data.x.get(i), (int) (double) data.y.get(i), 40, 40);
+			for(int i = 0; i < data.indieData.size(); i++) {
+				g.drawRect((int) data.indieData.get(i).x, (int) data.indieData.get(i).y, 40, 40);
 			}
 		}
 		public void update(GameContainer gc, int delta) throws SlickException {
